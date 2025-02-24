@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 42px;
+  }
+
+body{
+    background-color: #23272A;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+div.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+div.content>div.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap:40px
+}
+img, p {
+    -webkit-touch-callout: none;
+    user-select: none;
+    pointer-events: none;
+  }
+
+div.card{
+    height: 300px;
+    width: 400;
+    background-color:#f6f6f6;
+    border-radius: 30px;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 300px;
+    max-height: 300px;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    border: 3px solid transparent;
+}
+div.card:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+div.card-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+div.card-content img{
+   height: 90%;
+   width: 90%;
+   user-select: none;
+
+}
+
+.loader {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 25px;
+    width: 0;
+    background: #3498db;
+    transition: width 0.3s;
+  }
+  
+  .card:active .loader {
+    animation: loadBar 1.1s linear forwards;
+  }
+  
+  .card:active {
+    animation: popBorder;
+  }
+  
+  @keyframes loadBar {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes popBorder {
+    0% {
+      border-color: transparent;
+      transform: scale(1);
+    }
+    50% {
+      border-color: red;
+      transform: scale(1.05);
+    }
+    100% {
+      border-color: red;
+      transform: scale(1);
+    }
+}
+
+/* Keep the hover effect for desktop only */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease-in-out;
+  }
+}
+
+
+@media only screen and (max-width: 812px) {
+  
+    div.card{
+        height: 250px;
+        width: 350px;
+        background-color:#f6f6f6;
+        border-radius: 30px;
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 200px;
+        max-height: 200px;
+    }
+  }
+
+  @media (max-width: 812px) {
+    .card, .card * {
+      -webkit-touch-callout: none; /* Disable callouts */
+      -webkit-user-select: none;   /* Disable selection on Safari */
+      -moz-user-select: none;      /* Disable selection on Firefox */
+      -ms-user-select: none;       /* Disable selection on IE/Edge */
+      user-select: none;           /* Standard property */
+    }
+
+    .card a {
+      -webkit-user-drag: none;
+      user-drag: none;
+    }
+  }
