@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&family=Share+Tech+Mono&display=swap');
+
 .press-start-2p-regular {
     font-family: "Press Start 2P", serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 42px;
+    font-size: 40px;
+
+    background: linear-gradient(to bottom, #e47a24 40%, #94440b 60%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-size: 40px !important;
+  }
+
+  html, body {
+    touch-action: manipulation;
   }
 
 body{
@@ -18,11 +29,44 @@ body{
   -webkit-touch-callout: none;
 }
 
-div.content{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
+.bookmark{
+  position: absolute;
+  top:20px;
+  right: 25px;
+  
 }
+
+div.bookmark>span{
+  font-family: 'Orbitron', sans-serif; /* Or try 'Share Tech Mono' for a digital clock feel */
+  font-size: 16px; /* Adjust for better readability */
+  font-weight: bold;
+  color: #FFA500; /* Orange, fits gaming aesthetics */
+  background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent for contrast */
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card-content a {
+  display: inline-flex; /* or "flex" */
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 90%;
+  height: 90%;
+  pointer-events: none; 
+}
+
+
+
 div.content>div.row{
     display: flex;
     flex-direction: row;
@@ -72,24 +116,9 @@ div.card-content img{
 
 }
 
-.loader {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 25px;
-    width: 0;
-    background: #3498db;
-    transition: width 0.3s;
-  }
-  
-  .card:active .loader {
-    animation: loadBar 1.1s linear forwards;
-  }
-  
-  .card:active {
-    animation: popBorder;
-  }
-  
+.songless{
+  font-family: Arial, Helvetica, sans-serif; font-weight: bold;font-size: 55px;color:black
+}
   @keyframes loadBar {
     0% {
       width: 0;
@@ -144,6 +173,31 @@ div.card-content img{
       -moz-user-select: none;      /* Disable selection on Firefox */
       -ms-user-select: none;       /* Disable selection on IE/Edge */
       user-select: none;           /* Standard property */
+    }
+
+    .bookmark{
+      position: absolute;
+      top:15px;
+      right: 15px;
+    }
+
+    div.bookmark>span{
+      font-family: 'Orbitron', sans-serif; /* Or try 'Share Tech Mono' for a digital clock feel */
+      font-size: 14px; /* Adjust for better readability */
+      font-weight: bold;
+      color: #FFA500; /* Orange, fits gaming aesthetics */
+      background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent for contrast */
+      padding: 5px 8px;
+      border-radius: 5px;
+    }
+
+    .press-start-2p-regular{
+      font-size: 35px !important;
+    }
+
+    .songless{
+      font-size: 50px !important;
+
     }
 
     .card p {
