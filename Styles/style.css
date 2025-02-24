@@ -146,6 +146,14 @@ div.card-content img{
       user-select: none;           /* Standard property */
     }
 
+    .card p {
+      -webkit-user-select: none;  /* Safari/Chrome */
+      -moz-user-select: none;     /* Firefox */
+      -ms-user-select: none;      /* IE/Edge */
+      user-select: none;          /* Standard */
+      -webkit-touch-callout: none; /* Disable callouts on iOS */
+    }
+
     .card a {
       -webkit-user-drag: none;
       user-drag: none;
