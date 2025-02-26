@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 </head>
-<body>
-    <div class="navbar" style="width: 100%;height:150px;background-color: rebeccapurple;margin: 0;padding: 0;">
 
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <img src="./Images/Quizzo-logo.svg" alt="Quizzo Logo" class="logo">
+        </div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="#4B5159" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="#40464D" />
+
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="#2C3136" />
+
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#23272A" />
+        </g>
+        </svg>
     </div>
-    <div class="content" style="margin-top: 40px;">
+   
+    <div class="content">
         <div class="row">
 
             <div class="card">
                 <a href="https://angle.wtf/">
-                <div class="card-content">
-                    <div class="bookmark"><span class="countdown" data-time="24"></span></div>
-                    <img src="./Images/Angle.svg">
-                </div>
+                    <div class="card-content">
+                        <div class="bookmark"><span class="countdown" data-time="24"></span></div>
+                        <img src="./Images/Angle.svg">
+                    </div>
                 </a>
             </div>
 
-        
+
             <div class="card">
                 <a href="https://pietroppeter.github.io/wordle-it/">
                     <div class="card-content">
@@ -35,17 +54,17 @@
 
             <div class="card">
                 <a href="https://pokedle.net/">
-                <div class="card-content">
-                    <div class="bookmark"><span class="countdown" data-time="23"></span></div>                    
-                    <img src="./Images/Pokedle.webp" style="height: 55%;" >
-                </div>
-            </a>
+                    <div class="card-content">
+                        <div class="bookmark"><span class="countdown" data-time="23"></span></div>
+                        <img src="./Images/Pokedle.webp" style="height: 55%;">
+                    </div>
+                </a>
             </div>
 
             <div class="card">
                 <a href="https://spotle.io/" style="text-decoration: none;">
-                    <div class="card-content" >
-                        <div class="bookmark"><span class="countdown" data-time="6"></span></div>                    
+                    <div class="card-content">
+                        <div class="bookmark"><span class="countdown" data-time="6"></span></div>
                         <img src="./Images/Spotle.svg" style="width: 80%;">
                     </div>
                 </a>
@@ -55,13 +74,13 @@
             <div class="card">
                 <a href="https://www.ed0.it/quiz/guessthealbum/" style="text-decoration: none;">
                     <div class="card-content">
-                    <img src="./Images/Guess The Album.svg" style="height:70%;width:70%;">
+                        <img src="./Images/Guess The Album.svg" style="height:70%;width:70%;">
                     </div>
                 </a>
 
-              </div>
-              
-            
+            </div>
+
+
             <div class="card">
                 <a href="https://www.gamedle.wtf/?lang=it" style="text-decoration: none;">
                     <div class="card-content">
@@ -80,7 +99,7 @@
                 </a>
             </div>
 
-           
+
 
             <div class="card">
                 <a href="https://www.ed0.it/quiz/parolachiave/" style="text-decoration: none;">
@@ -89,7 +108,7 @@
                     </div>
                 </a>
             </div>
-        
+
 
             <div class="card">
                 <a href="https://jeopardylabs.com/" style="text-decoration: none;">
@@ -111,7 +130,26 @@
                     <div class="card-content">
                         <div class="bookmark"><span class="countdown" data-time="24"></span></div>
 
-                        <div style="display: flex; gap: 4px;font-family:Arial, Helvetica, sans-serif"><div style="background-color: rgb(83, 141, 78); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">F</div><div style="background-color: rgb(83, 141, 78); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">L</div><div style="background-color: rgb(83, 141, 78); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">A</div><div style="background-color: rgb(33, 97, 186); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">G</div><div style="background-color: rgb(33, 97, 186); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">L</div><div style="background-color: rgb(33, 97, 186); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">E</div></div>
+                        <div style="display: flex; gap: 4px;font-family:Arial, Helvetica, sans-serif">
+                            <div
+                                style="background-color: rgb(83, 141, 78); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">
+                                F</div>
+                            <div
+                                style="background-color: rgb(83, 141, 78); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">
+                                L</div>
+                            <div
+                                style="background-color: rgb(83, 141, 78); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">
+                                A</div>
+                            <div
+                                style="background-color: rgb(33, 97, 186); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">
+                                G</div>
+                            <div
+                                style="background-color: rgb(33, 97, 186); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">
+                                L</div>
+                            <div
+                                style="background-color: rgb(33, 97, 186); color: rgb(255, 255, 255); padding: 4px 8px; font-size: 40px; font-weight: bold;">
+                                E</div>
+                        </div>
                     </div>
                 </a>
 
@@ -119,17 +157,18 @@
 
             <div class="card">
                 <a href="https://timeguessr.com/" style="text-decoration: none;">
-                <div class="card-content">
-                    <div class="bookmark"><span class="countdown" data-time="8"></span></div>
-                    <img src="./Images/Timeguessr.svg" style="height:70%;width: 70%;">
-                </div>
-            </a>
+                    <div class="card-content">
+                        <div class="bookmark"><span class="countdown" data-time="8"></span></div>
+                        <img src="./Images/Timeguessr.svg" style="height:70%;width: 70%;">
+                    </div>
+                </a>
             </div>
-       </div>
-       
+        </div>
+
     </div>
 </body>
 <script src="./JS/scripts.js"></script>
 <script>
 </script>
+
 </html>

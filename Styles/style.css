@@ -3,45 +3,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&family=Share+Tech+Mono&display=swap');
 
 .press-start-2p-regular {
-    font-family: "Press Start 2P", serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 40px;
+  font-family: "Press Start 2P", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
 
-    background: linear-gradient(to bottom, #e47a24 40%, #94440b 60%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    font-size: 40px !important;
-  }
+  background: linear-gradient(to bottom, #e47a24 40%, #94440b 60%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: 40px !important;
+}
 
-  html, body {
-    touch-action: manipulation;
-  }
+html,
+body {
+  touch-action: manipulation;
+}
 
-body{
-    background-color: #23272A;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    -webkit-user-select: none;
+body {
+  background-color: #23272A;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
 }
 
-.bookmark{
-  position: absolute;
-  top:20px;
-  right: 25px;
-  
+.navbar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* Mette i contenuti uno sopra l'altro */
+  width: 100%;
+  height: 350px;
+  /* Altezza totale */
+  background-color: #007BFF;
+
+
 }
 
-div.bookmark>span{
-  font-family: 'Orbitron', sans-serif; /* Or try 'Share Tech Mono' for a digital clock feel */
-  font-size: 16px; /* Adjust for better readability */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  /* Occupa solo la parte azzurra */
+}
+
+.content{
+  margin-top: 120px;
+}
+
+
+img.logo {
+  height: 250px;
+  z-index: 999;
+  margin: 0;
+} 
+
+.bookmark {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+}
+
+div.bookmark>span {
+  font-family: 'Orbitron', sans-serif;
+  /* Or try 'Share Tech Mono' for a digital clock feel */
+  font-size: 16px;
+  /* Adjust for better readability */
   font-weight: bold;
-  color: #FFA500; /* Orange, fits gaming aesthetics */
-  background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent for contrast */
+  color: #FFA500;
+  /* Orange, fits gaming aesthetics */
+  background: rgba(0, 0, 0, 0.8);
+  /* Dark semi-transparent for contrast */
   padding: 5px 8px;
   border-radius: 5px;
 }
@@ -56,160 +93,247 @@ div.bookmark>span{
 }
 
 .card-content a {
-  display: inline-flex; /* or "flex" */
+  display: inline-flex;
+  /* or "flex" */
   justify-content: center;
   align-items: center;
   text-decoration: none;
   width: 90%;
   height: 90%;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 
 
-div.content>div.row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap:40px
+div.content>div.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px
 }
-img, p {
-    -webkit-touch-callout: none;
-    user-select: none;
-    pointer-events: none;
+
+img,
+p {
+  -webkit-touch-callout: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+div.card {
+  height: 300px;
+  width: 400;
+  background-color: #f6f6f6;
+  border-radius: 30px;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 300px;
+  max-height: 300px;
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  border: 3px solid transparent;
+}
+
+div.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+div.card-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+div.card-content img {
+  height: 90%;
+  width: 90%;
+  user-select: none;
+
+}
+
+.songless {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 55px;
+  color: black
+}
+
+@keyframes loadBar {
+  0% {
+    width: 0;
   }
 
-div.card{
-    height: 300px;
-    width: 400;
-    background-color:#f6f6f6;
-    border-radius: 30px;
-    min-width: 400px;
-    max-width: 400px;
-    min-height: 300px;
-    max-height: 300px;
-    user-select: none;
-    cursor: pointer;
-    overflow: hidden;
-    border: 3px solid transparent;
-}
-div.card:hover{
-    transform: scale(1.05);
-    transition: transform 0.2s;
-}
-
-div.card-content{
-    height: 100%;
+  100% {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-}
-
-div.card-content img{
-   height: 90%;
-   width: 90%;
-   user-select: none;
-
-}
-
-.songless{
-  font-family: Arial, Helvetica, sans-serif; font-weight: bold;font-size: 55px;color:black
-}
-  @keyframes loadBar {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
   }
-  
-  @keyframes popBorder {
-    0% {
-      border-color: transparent;
-      transform: scale(1);
-    }
-    50% {
-      border-color: red;
-      transform: scale(1.05);
-    }
-    100% {
-      border-color: red;
-      transform: scale(1);
-    }
+}
+
+@keyframes popBorder {
+  0% {
+    border-color: transparent;
+    transform: scale(1);
+  }
+
+  50% {
+    border-color: red;
+    transform: scale(1.05);
+  }
+
+  100% {
+    border-color: red;
+    transform: scale(1);
+  }
 }
 
 /* Keep the hover effect for desktop only */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
-      transform: scale(1.05);
-      transition: transform 0.2s ease-in-out;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
   }
 }
 
 
 @media only screen and (max-width: 812px) {
+
+  img.logo {
+    height: 200px;
+    z-index: 999;
+    margin: 0;
+  } 
+
+  .navbar {
+    height: 280px;
+  }
+
+  .content{
+    margin-top: 80px;
+  }
   
-    div.card{
-        height: 250px;
-        width: 350px;
-        background-color:#f6f6f6;
-        border-radius: 30px;
-        min-width: 300px;
-        max-width: 300px;
-        min-height: 200px;
-        max-height: 200px;
-    }
+  div.card {
+    height: 250px;
+    width: 350px;
+    background-color: #f6f6f6;
+    border-radius: 30px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 200px;
+    max-height: 200px;
+  }
+  
+}
+
+@media (max-width: 812px) { 
+
+  .card,
+  .card * {
+    -webkit-touch-callout: none;
+    /* Disable callouts */
+    -webkit-user-select: none;
+    /* Disable selection on Safari */
+    -moz-user-select: none;
+    /* Disable selection on Firefox */
+    -ms-user-select: none;
+    /* Disable selection on IE/Edge */
+    user-select: none;
+    /* Standard property */
   }
 
-  @media (max-width: 812px) {
-    .card, .card * {
-      -webkit-touch-callout: none; /* Disable callouts */
-      -webkit-user-select: none;   /* Disable selection on Safari */
-      -moz-user-select: none;      /* Disable selection on Firefox */
-      -ms-user-select: none;       /* Disable selection on IE/Edge */
-      user-select: none;           /* Standard property */
-    }
-
-    .bookmark{
-      position: absolute;
-      top:15px;
-      right: 15px;
-    }
-
-    div.bookmark>span{
-      font-family: 'Orbitron', sans-serif; /* Or try 'Share Tech Mono' for a digital clock feel */
-      font-size: 14px; /* Adjust for better readability */
-      font-weight: bold;
-      color: #FFA500; /* Orange, fits gaming aesthetics */
-      background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent for contrast */
-      padding: 5px 8px;
-      border-radius: 5px;
-    }
-
-    .press-start-2p-regular{
-      font-size: 35px !important;
-    }
-
-    .songless{
-      font-size: 50px !important;
-
-    }
-
-    .card p {
-      -webkit-user-select: none;  /* Safari/Chrome */
-      -moz-user-select: none;     /* Firefox */
-      -ms-user-select: none;      /* IE/Edge */
-      user-select: none;          /* Standard */
-      -webkit-touch-callout: none; /* Disable callouts on iOS */
-    }
-
-    .card a {
-      -webkit-user-drag: none;
-      user-drag: none;
-    }
+  .bookmark {
+    position: absolute;
+    top: 15px;
+    right: 15px;
   }
+
+  div.bookmark>span {
+    font-family: 'Orbitron', sans-serif;
+    /* Or try 'Share Tech Mono' for a digital clock feel */
+    font-size: 14px;
+    /* Adjust for better readability */
+    font-weight: bold;
+    color: #FFA500;
+    /* Orange, fits gaming aesthetics */
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark semi-transparent for contrast */
+    padding: 5px 8px;
+    border-radius: 5px;
+  }
+
+  .press-start-2p-regular {
+    font-size: 35px !important;
+  }
+
+  .songless {
+    font-size: 50px !important;
+
+  }
+
+  .card p {
+    -webkit-user-select: none;
+    /* Safari/Chrome */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
+    user-select: none;
+    /* Standard */
+    -webkit-touch-callout: none;
+    /* Disable callouts on iOS */
+  }
+
+  .card a {
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+}
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 9s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 12s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 15s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 22s;
+}
+
+.waves {
+  position: absolute;
+  bottom: -2px;
+  /* Evita gap indesiderati */
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
